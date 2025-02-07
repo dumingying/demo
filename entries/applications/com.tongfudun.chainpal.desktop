@@ -1,0 +1,16 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=chainpal
+Name[zh_CN]=链上会
+Comment=Chainpal PC Client
+Comment[zh_CN]=链上会 PC客户端
+Exec=/opt/链上会/链上会 %U
+GenericName=chainpal
+GenericName[zh_CN]=链上会
+MimeType=application/chainpal;
+Icon=/opt/链上会/resources/extraResources/icons/icon_128x128.png
+Keywords=various;keywords;describing;your;application;
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=Chat;

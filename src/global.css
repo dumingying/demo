@@ -1,0 +1,251 @@
+@import '~@madogai/vue-context/dist/css/vue-context.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-app-region: no-drag;
+}
+
+.tippy-tooltip.light-theme {
+    /* todo */
+    background-color: white;
+    border: 2px solid white;
+    /*width: 350px;*/
+    /*height: 350px;*/
+}
+
+/* .tippy-arrow {
+    border-right: 8px solid white !important;
+} */
+
+.vue-notification-group {
+    margin: var(--main-margin-top) var(--main-margin-right) 0 0;
+}
+
+
+img.emoji {
+    height: 24px !important;
+    width: 24px !important;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.single-line {
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.new-single-line {
+    overflow: hidden;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+div,
+button,
+img,
+video {
+    outline: none;
+}
+
+p,
+div {
+    word-break: break-word;
+    user-select: none;
+}
+
+.vm--modal {
+    border-radius: 8px !important;
+    -webkit-border-radius: 8px !important;
+    -moz-border-radius: 8px !important;
+    -ms-border-radius: 8px !important;
+    -o-border-radius: 8px !important;
+}
+
+
+/* 右键更多菜单样式重置 */
+.v-context {
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25),
+        0px 32px 32px -24px rgba(0, 0, 0, 0.1);
+    min-width: 6rem;
+}
+
+.v-context>li {
+    padding: 0 8px;
+    display: flex;
+}
+
+.v-context>li.disabled a {
+    color: #999;
+}
+
+.v-context>li.disabled a:hover {
+    background: none;
+    color: #999;
+}
+
+.v-context>li>a {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.v-context>li>a:hover {
+    background: #1dbb88;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.delete-other-wrap .not-remind-btn {
+    position: relative;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 12px;
+    min-width: 100px;
+    display: block;
+    padding-left: 18px;
+    text-align: left;
+}
+
+.delete-other-wrap .not-remind-btn::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    width: 12px;
+    height: 12px;
+    border: 1px solid #1dbb88;
+    border-radius: 50%;
+    box-sizing: border-box;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.delete-other-wrap .active {
+    position: relative;
+}
+
+.delete-other-wrap .active::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    content: '';
+    width: 12px;
+    height: 12px;
+    border: 1px solid #1dbb88;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.delete-other-wrap .active::after {
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #1dbb88;
+    border: 1px solid #1dbb88;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -o-transform: translateY(-50%);
+}
+
+/* 滚动加载样式重置 */
+.ivu-scroll-loader-text,
+.ivu-spin {
+    color: #1dbb88 !important;
+}
+
+.ivu-scroll-container {
+    width: 100%;
+    height: 100%;
+    -scrollbar-window-width: 0px;
+    overflow-y: auto;
+}
+
+.ivu-scroll-loader-wrapper-active,
+.ivu-scroll-loader-wrapper-active .ivu-scroll-spinner {
+    height: 40px;
+}
+
+.ivu-scroll-wrapper.win {
+    margin-top: 30px;
+    height: calc(100% - 30px);
+}
+
+/* 切换按钮样式 */
+.public-checked-btn {
+    margin: 3px 0 0 20px;
+    width: 40px;
+    height: 24px;
+    background: #e5e5e5;
+    border-radius: 12px;
+    position: relative;
+    padding: 2px 0;
+    box-sizing: border-box;
+    transition: all 0.4s;
+}
+
+.public-checked-btn::after {
+    position: absolute;
+    left: 2px;
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 0.1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease-in-out;
+}
+
+.public-checked-btn.active {
+    position: relative;
+    background: #1dbb88;
+    border-radius: 12px;
+
+
+}
+
+.public-checked-btn.active::after {
+    left: calc(100% - 22px);
+}

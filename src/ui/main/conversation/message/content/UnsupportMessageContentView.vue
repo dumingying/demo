@@ -1,0 +1,41 @@
+<template>
+  <div class="text-message-container"
+       v-bind:class="{out:message.direction === 0}">
+    <p class="text">{{ message.messageContent.digest(message) }}</p>
+  </div>
+</template>
+
+<script>
+import Message from '@/wfc/messages/message'
+
+// pc/web端不支持的消息，比如红包等
+export default {
+  name: 'UnsupportMessageContentView',
+  props: {
+    message: {
+      type: Message,
+      required: true
+    }
+  }
+}
+</script>
+
+<style lang="css" scoped>
+.text-message-container {
+  margin: 0 10px;
+  padding: 10px;
+  line-height: 24px;
+  background-color: white;
+  position: relative;
+  border-radius: 5px;
+}
+
+.text-message-container.out {
+  background-color: #1dbb88;
+}
+
+.text-message-container .text {
+  color: #050505;
+  font-size: 14px;
+}
+</style>
